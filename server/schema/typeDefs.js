@@ -1,10 +1,6 @@
-const { qgl } = require ( 'apollo-server-express');
+const { gql } = require ( 'apollo-server-express');
 
 const typeDefs = gql `
-
-type Checkout {
-    session : ID
-}
 
 type Category {
     _id: ID
@@ -39,11 +35,18 @@ type User {
 
 }
 
+
 type Auth {
     token: ID
     user: user
 
 }
+
+
+type Checkout {
+    session : ID
+}
+
 
 type Query{
     categories: [Category]
