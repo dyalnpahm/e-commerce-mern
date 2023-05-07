@@ -5,7 +5,7 @@ const { authMiddleware } = require ('./utils/auth');
 
 
 const { typeDefs, resolvers } = require('./schema');
-const db = require('./config/connection');
+const connectDB = require('./config/connection');
 const { config } = require('process');
 const PORT = process.env.PORT || 5000;
 const app = express ();
@@ -34,7 +34,7 @@ if (process.env.NODE_ENV === 'production') {
     await server.start();
     server.applyMiddleware({ app });
     
-    db.once('open', () => {
+    connectDB.once('open', () => {
       app.listen(PORT, () => {
         console.log(`API server running on port ${PORT}!`);
         console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);

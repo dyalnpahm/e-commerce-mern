@@ -112,6 +112,7 @@ connectDB.once ('open', async () => {
         name: 'Frederique Constant Classic Index Automatic',
         description: 'classical and refined time piece of exceptional value.',
         image: 'index.jpg',
+        price: 1595.00,
         category: categories[4]._id,
     },
 ]);
