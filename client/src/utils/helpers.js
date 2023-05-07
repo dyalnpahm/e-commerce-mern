@@ -7,20 +7,22 @@ export function pluralize(name, count) {
 
 export function iconnectDBPromise (storeName, method, object) {
     return new Promise((resolve, reject) => {
-        const request = window.indexedconnectDB.open('highdrive', 1);
+//connect to db
+        const request = window.indexedconnectDB.open('mern_db', 1);
+        //variables 
         let connectDB, tx, store ;
         request.onupgradeneeded = function(e) {
-            const connectconnectDB = request.result;
+            const connectDB = request.result;
             connectDB.createObjectStore('categories', {keyPath: '_id'});
             connectDB.createObjectStore('products', {keyPath: '_id'});
             connectDB.createObjectStore('cart', {keyPath: '_id'});
 
 };
-
+//error with connection
 request.onerror = function(e) {
     console.log('Error has occured');
 };
-
+//success with connection
 request.onsuccess = function(e) {
     console.log('successfully connected');
     connectDB = request.result;
@@ -49,7 +51,7 @@ request.onsuccess = function(e) {
             console.log('Not possible');
             break;
     }
- 
+ //when transaction is complete
     tx.oncomplete = function() {
         connectconnectDB.close();
     }
