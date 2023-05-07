@@ -9,14 +9,11 @@ const PORT = process.env.PORT || 5000;
 const app = express ();
 
 const server = new ApolloServer({
-    typeDefs,
-    resolvers,
-    context: authMiddleware,
+  typeDefs,
+  resolvers,
+  context: authMiddleware,
 });
 
-server.applyMiddleware({ app });
-
-connectDB();
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
