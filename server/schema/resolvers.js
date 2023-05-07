@@ -26,7 +26,7 @@ const resolvers = {
         product: async (parent, {_id}) => {
             return await Product.findbyId(_id).populate('category');
 
-
+            
         },
         user: async (parent, args, context) => {
             if (context.user){
@@ -112,7 +112,7 @@ Mutation: {
         }
         const token = signToken(user);
         return{ token, user };
-        
+
     }
     }
 };

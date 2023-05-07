@@ -38,7 +38,7 @@ type User {
 
 type Auth {
     token: ID
-    user: user
+    user: User
 
 }
 
