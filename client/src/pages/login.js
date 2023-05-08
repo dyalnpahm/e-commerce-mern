@@ -51,7 +51,7 @@ function Login(props) {
             placeholder="******"
             name="password"
             type="password"
-            id="psw"
+            id="pwd"
             onChange={handleChange}
           />
         </div>
