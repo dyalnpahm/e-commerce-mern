@@ -43,7 +43,7 @@ function Category() {
 
   return (
     <div>
-      <h2></h2>
+      <h2>Choose a Category:</h2>
       {categories.map((item) => (
         <button
           key={item._id}

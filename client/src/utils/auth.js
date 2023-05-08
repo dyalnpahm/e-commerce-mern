@@ -12,8 +12,8 @@ class Auth {
 
 isTokenExpired(token) {
     try {
-        const verify = verify(token);
-        if (verify.exp < Date.now() / 600) {
+        const decoded = decode(token);
+        if (decoded.exp < Date.now() / 600) {
             return true;
         } else return false;
 
