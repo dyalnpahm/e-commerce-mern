@@ -13,7 +13,7 @@ class Auth {
 isTokenExpired(token) {
     try {
         const decoded = decode(token);
-        if (decoded.exp < Date.now() / 600) {
+        if (decoded.exp < Date.now() / 1000) {
             return true;
         } else return false;
 
@@ -33,7 +33,7 @@ login(idToken) {
 
 logout() {
     localStorage.removeItem('id_token');
-    window.location.reload();
+    window.location.assign('/');
     }
 }
 export default new Auth();

@@ -4,7 +4,7 @@ import { pluralize } from "../../utils/helpers"
 import { useStoreContext } from "../../utils/globalstate";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/action";
 import { idbPromise } from "../../utils/helpers";
-
+import "./style.css";
 function ProductItem(item) {
   const [state, dispatch] = useStoreContext();
 
@@ -44,8 +44,11 @@ function ProductItem(item) {
       <Link to={`/products/${_id}`}>
         <img
           alt={name}
-          src={`/images/${image}width` }
+          src={`/images/${image}` }
+          className="watches-img"
+          
         />
+        
         <p>{name}</p>
       </Link>
       <div>
