@@ -6,21 +6,7 @@ mutation login($email: String!, $password: String!) {
         token
         user{
              _id
-            // firstName
-            // lastName
-            // email
-            // orders{
-            //     _id
-            //     purchaseDate
-            //     products{
-            //         _id
-            //         name
-            //         description
-            //         price
-            //         quantity
-            //         image
-            //     }
-            // }
+            
         }
     }
 }
@@ -36,11 +22,13 @@ mutation addOrder($products: [ID]!) {
             description
             price
             quantity
-            image
+            category {
+                name
             }
         }
     }
-}`;
+}
+`;
 
 export const ADD_USER = gql`
 mutation addUser($firstName: String!, $lastName: String!, $email: String!, $password: String!) {
@@ -48,21 +36,7 @@ mutation addUser($firstName: String!, $lastName: String!, $email: String!, $pass
         token
         user{
             _id
-            /* firstName
-            lastName
-            email
-            orders{
-                _id
-                purchaseDate
-                products{
-                    _id
-                    name
-                    description
-                    price
-                    quantity
-                    image
-                }
-            } */
+           
         }
     }
 }
