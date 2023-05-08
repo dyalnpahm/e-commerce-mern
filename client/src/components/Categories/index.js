@@ -8,7 +8,7 @@ import {
 import { QUERY_CATEGORIES } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
 
-function Category() {
+function CategoryMenu() {
   const [state, dispatch] = useStoreContext();
 
   const { categories } = state;
@@ -58,4 +58,4 @@ function Category() {
   );
 }
 
-export default Category;
+export default CategoryMenu;
