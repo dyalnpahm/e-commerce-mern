@@ -1,11 +1,11 @@
-import React , { createContext, useContext, useReducer } from 'react';
+import React , { createContext, useContext } from 'react';
 import { useProductReducer } from './reducers';
 
 const Store = createContext();
 const { Provider } = Store;
 
 const StoreProvider = ({ value = [], ...props }) => {
-    const [state, dispatch] = useReducer(useProductReducer, {
+    const [state, dispatch] = useProductReducer({
         products: [],
         cart: [],
         cartOpen: false,
