@@ -5,10 +5,10 @@ export function pluralize(name, count) {
     return name + 's';
 }
 
-export function iconnectDBPromise (storeName, method, object) {
+export function idbPromise (storeName, method, object) {
     return new Promise((resolve, reject) => {
 //connect to db
-        const request = window.indexedconnectDB.open('mern_db', 1);
+        const request = window.indexedDB.open('mern_db', 1);
         //variables 
         let connectDB, txn, store ;
         request.onupgradeneeded = function(e) {
@@ -53,7 +53,7 @@ request.onsuccess = function(e) {
     }
  //when transaction is complete
     txn.oncomplete = function() {
-        connectconnectDB.close();
+        connectDB.close();
     }
 };
 });
