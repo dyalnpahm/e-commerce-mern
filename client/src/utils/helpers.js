@@ -10,7 +10,7 @@ export function iconnectDBPromise (storeName, method, object) {
 //connect to db
         const request = window.indexedconnectDB.open('mern_db', 1);
         //variables 
-        let connectDB, tx, store ;
+        let connectDB, txn, store ;
         request.onupgradeneeded = function(e) {
             const connectDB = request.result;
             connectDB.createObjectStore('categories', {keyPath: '_id'});
@@ -26,8 +26,8 @@ request.onerror = function(e) {
 request.onsuccess = function(e) {
     console.log('successfully connected');
     connectDB = request.result;
-    tx = connectDB.transaction(storeName, 'readwrite');
-    store = tx.objectStore(storeName);
+    txn = connectDB.transaction(storeName, 'readwrite');
+    store = txn.objectStore(storeName);
 
     connectDB.onerror = function(e) {
         console.log('error occured', e);
@@ -52,7 +52,7 @@ request.onsuccess = function(e) {
             break;
     }
  //when transaction is complete
-    tx.oncomplete = function() {
+    txn.oncomplete = function() {
         connectconnectDB.close();
     }
 };
