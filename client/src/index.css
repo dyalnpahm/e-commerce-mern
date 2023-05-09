@@ -1,6 +1,6 @@
 :root {
   --primary: #232F3E;
-  --secondary: #F3A847;
+  --secondary: rgba(128, 128, 128, 0.733);
   --tertiary: #B12704;
   --light: #fafafa;
   --dark: #272f32;
@@ -50,6 +50,7 @@ h2 {
 
 h3 {
   font-size: 1.75rem;
+
 }
 
 h4 {

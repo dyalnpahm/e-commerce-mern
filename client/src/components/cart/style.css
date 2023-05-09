@@ -11,7 +11,9 @@
     box-shadow: 0 0 1rem rgba(0, 0, 0, .5);
     border-bottom-left-radius: .5rem;
   }
-  
+  .cart h3 {
+    font-family: 'Roboto', sans-serif;
+  }
   .cart h2 {
     font-size: 1.5rem;
     border-bottom: 1px solid var(--dark);

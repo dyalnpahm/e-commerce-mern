@@ -2,10 +2,11 @@ import React from 'react';
 import { useStoreContext } from "../../utils/globalstate";
 import { REMOVE_FROM_CART, UPDATE_CART_QUANTITY } from "../../utils/action";
 import { idbPromise } from "../../utils/helpers";
+import { DeleteOutlined } from '@ant-design/icons';
 
 const CartItem = ({ item }) => {
 
-  const [,dispatch] = useStoreContext();
+  const [, dispatch] = useStoreContext();
 
   const removeFromCart = item => {
     dispatch({
@@ -59,7 +60,7 @@ const CartItem = ({ item }) => {
             aria-label="trash"
             onClick={() => removeFromCart(item)}
           >
-            🗑️
+            <DeleteOutlined style = {{fontSize: '20px'}}/>
           </span>
         </div>
       </div>

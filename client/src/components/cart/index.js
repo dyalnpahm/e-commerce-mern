@@ -8,6 +8,7 @@ import Auth from '../../utils/auth';
 import { useStoreContext } from '../../utils/globalstate';
 import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/action';
 import './style.css';
+import {ShoppingCartOutlined} from '@ant-design/icons'
 
 const stripePromise = loadStripe('pk_test_51N4I0bGpCDQTXt0mDgIsWRClLx1kBz6Cr6nyeu0klpbivKJxUEHZMGTIo7psaNqL3TvMKwYaCGmXDrmyUtfQRWBU00aNpRfiPM');
 
@@ -63,9 +64,8 @@ const Cart = () => {
   if (!state.cartOpen) {
     return (
       <div className="cart-closed" onClick={toggleCart}>
-        <span role="img" aria-label="trash">
-          🛒
-        </span>
+        <ShoppingCartOutlined style={{color: 'white', fontSize:40}}/>
+          
       </div>
     );
   }
@@ -88,16 +88,14 @@ const Cart = () => {
             {Auth.loggedIn() ? (
               <button onClick={submitCheckout}>Checkout</button>
             ) : (
-              <span>(log in to check out)</span>
+              <span>(Log in!)</span>
             )}
           </div>
         </div>
       ) : (
         <h3>
-          <span role="img" aria-label="shocked">
-            😱
-          </span>
-          You haven't added anything to your cart yet!
+        
+          Add some items to your cart!
         </h3>
       )}
     </div>

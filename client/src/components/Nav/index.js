@@ -1,13 +1,13 @@
 import React from "react";
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
-
+import "./style.css";
 function Nav() {
 
   function showNavigation() {
     if (Auth.loggedIn()) {
       return (
-        <ul className="flex-row">
+        <ul className="flex-row ">
           <li className="mx-1">
             <Link to="/orderHistory">
               Order History
