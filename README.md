@@ -12,7 +12,7 @@ To install this application type npm i into the terminal.
 
 ## Usage
 
-![alt text](client\public\images\highdrive.PNG)
+![alt text](client\public\images\highdrive.jpg)
 
 To use click add to cart on the watch you desire, filter out watches by clicking the categories on the left. Once settled on a watch sign up/login and checkout!
 
