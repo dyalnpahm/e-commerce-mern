@@ -21,7 +21,7 @@ mutation addOrder($products: [ID]!) {
             name
             description
             price
-            quantity
+            
             category {
                 name
             }
