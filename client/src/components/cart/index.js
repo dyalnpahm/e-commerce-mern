@@ -9,7 +9,7 @@ import { useStoreContext } from '../../utils/globalstate';
 import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/action';
 import './style.css';
 import {ShoppingCartOutlined} from '@ant-design/icons'
-
+import {CloseOutlined} from '@ant-design/icons'
 const stripePromise = loadStripe('pk_test_51N4I0bGpCDQTXt0mDgIsWRClLx1kBz6Cr6nyeu0klpbivKJxUEHZMGTIo7psaNqL3TvMKwYaCGmXDrmyUtfQRWBU00aNpRfiPM');
 
 const Cart = () => {
@@ -73,7 +73,7 @@ const Cart = () => {
   return (
     <div className="cart">
       <div className="close" onClick={toggleCart}>
-        [x]
+        <CloseOutlined style={{color: 'gray', fontSize:25}}/>
       </div>
       <h2>Cart</h2>
       {state.cart.length ? (
@@ -95,7 +95,7 @@ const Cart = () => {
       ) : (
         <h3>
         
-          Add some items to your cart!
+          Your Cart is Empty!
         </h3>
       )}
     </div>

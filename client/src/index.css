@@ -7,6 +7,8 @@
   --error: rgb(228, 46, 1);
   --spacing-one: calc(1rem * 0.5);
   --spacing-two: calc(1rem);
+  --gray : #80808065;
+  
 }
 
 * {
@@ -42,6 +44,7 @@ h6 {
 
 h1 {
   font-size: 2.25rem;
+  padding-right: 73%;
 }
 
 h2 {
@@ -81,7 +84,13 @@ a:hover {
 }
 
 header {
-  background: var(--primary);
+  
+  background: rgba(0, 0, 0, 0.89);
+  
+
+
+  
+
 }
 
 header a {
@@ -111,6 +120,7 @@ button[disabled] {
 
 img {
   max-width: 100%;
+  
 }
 
 span[role="img"] {

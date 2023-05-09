@@ -1,1 +1,3 @@
-.order {padding-right: 200px}
+
+.header {display: flex;
+justify-content: center;}

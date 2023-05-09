@@ -2,6 +2,8 @@ import React from "react";
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
 import "./style.css";
+import { LoginOutlined } from "@ant-design/icons";
+
 function Nav() {
 
   function showNavigation() {
@@ -25,12 +27,13 @@ function Nav() {
         <ul className="flex-row">
           <li className="mx-1">
             <Link to="/signup">
-              Signup
+              Signup/Register!
             </Link>
           </li>
           <li className="mx-1">
             <Link to="/login">
-              Login
+              <LoginOutlined style={{color: 'white', fontSize: 30
+              }}/>
             </Link>
           </li>
         </ul>

@@ -1,0 +1,33 @@
+button {
+    background-color: transparent;
+    border: none;
+    margin: 5%;
+    font-size: 15px;
+  }
+  button:hover {
+    text-decoration: underline;
+  }
+  .mydiv {
+    position: absolute;
+    left: 5%;
+    top: 10%;
+    bottom: 0%;
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+
+  .underline {
+    padding-left: 25%;
+    font-family: 'Brush Script MT', cursive;
+    font-size: 32px;
+    
+  }
+  .testforcat {
+        position: absolute;
+    left: 300px;
+    display:flex;
+    flex-direction: column;
+  }

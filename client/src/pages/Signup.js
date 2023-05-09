@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import Auth from '../utils/auth';
 import { ADD_USER } from '../utils/mutations';
-
+import { ArrowLeftOutlined } from '@ant-design/icons';
 function Signup(props) {
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [addUser] = useMutation(ADD_USER);
@@ -32,7 +32,7 @@ function Signup(props) {
 
   return (
     <div className="container my-1">
-      <Link to="/login">←Login</Link>
+      <Link to="/login"><ArrowLeftOutlined style= {{color: 'black', fontSize: 30}}></ArrowLeftOutlined></Link>
 
       <h2>Signup</h2>
       <form onSubmit={handleFormSubmit}>
