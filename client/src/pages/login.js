@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { LOGIN } from '../utils/mutations';
 import Auth from '../utils/auth';
 import { Button, Space } from 'antd';
-import {ArrowLeftOutlined} from '@ant-design/icons';
 
 
 function Login(props) {
@@ -34,7 +33,7 @@ function Login(props) {
 
   return (
     <div className="container my-1">
-      <Link to="/signup"><ArrowLeftOutlined style={{color:'black', fontSize:30}} ></ArrowLeftOutlined></Link>
+      <Link to="/signup">← Register</Link>
 
       <h2>Login</h2>
       <form onSubmit={handleFormSubmit}>
@@ -64,9 +63,7 @@ function Login(props) {
           </div>
         ) : null}
         <div className="flex-row flex-end">
-          <Space wrap>
-          <Button type="primary">Login</Button>
-          </Space>
+          <button type="submit">Login</button>
         </div>
       </form>
     </div>

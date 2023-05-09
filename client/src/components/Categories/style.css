@@ -1,10 +1,10 @@
-button {
+.mybtn {
     background-color: transparent;
     border: none;
     margin: 5%;
     font-size: 15px;
   }
-  button:hover {
+  .mybtn:hover {
     text-decoration: underline;
   }
   .mydiv {
