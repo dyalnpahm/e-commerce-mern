@@ -5,6 +5,8 @@ import { useStoreContext } from "../../utils/globalstate";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/action";
 import { idbPromise } from "../../utils/helpers";
 import "./style.css";
+import { Button, Space } from 'antd';
+
 function ProductItem(item) {
   const [state, dispatch] = useStoreContext();
 
@@ -55,7 +57,10 @@ function ProductItem(item) {
         <div>{quantity} {pluralize("item", quantity)} in stock</div>
         <span>${price}</span>
       </div>
-      <button onClick={addToCart}>Add to cart</button>
+      <Space wrap>
+        <Button onclick={addToCart}> Add to cart</Button>
+      </Space>
+      {/* <button onClick={addToCart}>Add to cart</button> */}
     </div>
   );
 }
