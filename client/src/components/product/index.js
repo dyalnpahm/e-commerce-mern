@@ -57,10 +57,10 @@ function ProductItem(item) {
         <div>{quantity} {pluralize("item", quantity)} in stock</div>
         <span>${price}</span>
       </div>
-      <Space wrap>
+      {/* <Space wrap>
         <Button onclick={addToCart}> Add to cart</Button>
-      </Space>
-      {/* <button onClick={addToCart}>Add to cart</button> */}
+      </Space> */}
+      {<button onClick={addToCart}>Add to cart</button>}
     </div>
   );
 }
